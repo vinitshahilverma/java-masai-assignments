@@ -1,0 +1,15 @@
+Question:-Briefly explain the difference between Early and Late Binding with examples?
+
+Answer:- 
+          Generally method overloading is known as Early binding and method 
+          overriding is known as late binding.
+          
+          method overloading is a part of static polymorphysim; 
+          while method overriding is a part of runtime polymorphysim;
+          
+          
+          In early binding methods have the same name but it will take different
+          parameters;
+          
+          but in late binding, firstly it is acchived by inheritance. In the inheritance
+          methods have same name, same parameter but it is overridden; 

@@ -1,0 +1,33 @@
+Qno:-1
+insert into customers
+    ->  values (1,'abc','a','abc@gmail.com','1st street','chennai','TN','60001'),(2,'efg','e','efg@gmail.com','2nd Street','banglore','KA','50002'),(3,'ijk','i','ijk@gmail.com','3rd street','mumbai','MH','40002');
+
+
+part 2:-
+mysql> insert into orders
+    -> values (1,1,'2016-11-11'),(2,1,'2016-10-01'),(3,2,'2016-06-01'),(4,2,'2015-06-01'),(5,1,'2015-06-01');
+
+Main Answer:-
+ select e.email,count(*) order_count from customers e Inner join orders d on e.customer_id = d.customer_id where order_placed_date>='2016-01-01' group by email order by order_count desc;
+
+
+Qno:-2
+
+1. Write an SQL query to show the second highest salary from a Worker table.
+>select max(salary) from worker where salary < (select max(salary) from worker);
+
+2. Write an SQL query to determine the 5 highest salary from a Worker table.
+>select salary from worker order by salary desc limit 5;
+
+3. Write an SQL query to show only even rows from a Worker table.
+>select * from worker where worker_id % 2 = 0;
+
+4. Write an SQL query to fetch the no. of workers for each department in descending order
+from the Worker table.
+
+>select department,count(*) total from worker group by department order by total desc;
+
+5. Write an SQL query to fetch the list of employees with the same salary from the Worker
+table.
+
+>select * from worker where salary in (select salary from worker group by salary having count(1)>1);

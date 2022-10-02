@@ -1,0 +1,93 @@
+Q3/- How many types of relationships exist among tables in the
+     Database? Explain with some examples, and also mention how to
+     establish these relationships among tables with examples.
+     
+     
+Answer:- There are 3 types of relationships among the tables.
+
+
+       1) One to One:-
+           Example:- Person with Driving Licence.
+                     Person with Aadhar Card,
+                     
+                     
+              we can stablish this relationship using foreign key in any one table.
+              
+              example:-
+                       create table person
+                       (
+                        id int primary key,
+                        name varchar(12),
+                        address varchar(15)
+                        );
+                        
+                        Create table DL
+                        (
+                        dlid int primary key,
+                        issuedate date,
+                        expDate date,
+                        personId int unique
+                        Foreign key (personId) references person(id);
+                        );       
+              
+                     
+       2) One to Many:- 
+                        Manager with Employee.
+                        Department with Employee.
+                        Teacher with Student.
+                        
+                        we can stablish this relationship using foreign key in many table.
+                        
+                        create table department
+                         -> (
+                         -> did int primary key,
+                         -> dname varchar(12) not null,
+                         -> location varchar(12) not null
+                         -> );
+                         
+                         
+                         create table employee
+                         -> (
+                         -> empid int primary key,
+                         -> ename varchar(12) not null,
+                         -> address varchar(12) not null,
+                         -> mobile varchar(12) not null,
+                         -> salary int not null,
+                         -> deptId int,
+                         -> foreign key (deptId) references department(did)
+                         -> );
+                        
+                        
+       3) Many to Many:- 
+                        Student with Courses.
+                        Movies with Actors.
+                        
+                        
+                        we can stablish this relationship using foreign key in the third table.
+                        
+                          create table Student
+                          -> (
+                          -> roll int primary key,
+                          -> name varchar(12) not null,
+                          -> address varchar(12) not null,
+                          -> mobile varchar(10) not null
+                          -> );
+                          
+                          
+                          create table Course
+                          -> (
+                          -> cid int primary key,
+                          -> cname varchar(12) not null,
+                          -> fee int not null,
+                          -> duration varchar(12) not null
+                          -> );
+                          
+                          
+                          create table Student_Course
+                          -> (
+                          -> roll int,
+                          -> cid int,
+                          -> Foreign key(roll) references Student(roll),
+                          -> Foreign key(cid) references Course(cid)
+                          -> );
+       

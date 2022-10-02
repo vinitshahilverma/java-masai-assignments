@@ -1,0 +1,11 @@
+Q3) Explain the difference between comparable and comparator.
+
+Answer:- Comparable belongs to java.lang package.
+         Comparator belongs to java.util package.
+         
+         
+         By using comparable,we will specify the sorting rules/technique inside the class.
+         By using comparator we can define the sorting technique for a class object outside of that class.
+         
+         With the help of Comparable we can define only one sorting logic.
+         With the help of Comparator we can define multiple sorting logic.

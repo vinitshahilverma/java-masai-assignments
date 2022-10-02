@@ -1,0 +1,27 @@
+mysql> create table Faculty
+    -> (
+    -> FacultyID int primary key,
+    -> name varchar(20),
+    -> Department varchar(50),
+    -> gender varchar(5),
+    -> salary int,
+    -> workingHours int,
+    -> VacationHours int
+    -> );
+
+mysql> insert into Faculty
+    -> values (001,'Akash','CS','M',50000,45,NULL),
+    -> (002,'Shahil','EC','M',25000,50,NULL),
+    -> (003,'John','HSS','M',100000,60,NULL),
+    -> (004,'Shelley','CS','F',45000,80,NULL),
+    -> (005,'Anannya','CS','F',45000,100,NULL),
+    -> (006,'Sia','HSS','F',60000,40,NULL);
+
+Qno:1:-
+mysql> update faculty
+    -> set faculty.department = CASE
+    -> when faculty.department = 'CS' THEN 'ComputerScience'
+    -> when faculty.department = 'EC' THEN 'Electronics'
+    -> when faculty.department = 'HSS' THEN 'HumanitiesAndCommunication'
+    -> END
+    -> where faculty.department IN ('CS','EC','HSS');

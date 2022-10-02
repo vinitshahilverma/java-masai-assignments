@@ -1,0 +1,6 @@
+Question 1: Explain difference between PriorityQueue() and LinkedList()?
+
+Answer:- In priorityQueue when we try to add elements, they will get sorted on the basis of their natural order
+          or as per the comparator function.
+          
+         While in the LinkedList we just add the elements and the order of insertion is preserved.

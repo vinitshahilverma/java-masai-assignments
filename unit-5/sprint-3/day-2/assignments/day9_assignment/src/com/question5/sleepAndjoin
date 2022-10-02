@@ -1,0 +1,5 @@
+Q5/- What is the Difference between the sleep and join method .
+
+Answer:- Sleep method makes the thread to pause for the given time.
+
+         While join method makes the thread to wait till the another thread will completed.

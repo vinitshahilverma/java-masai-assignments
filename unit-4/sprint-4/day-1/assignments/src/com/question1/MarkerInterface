@@ -1,0 +1,60 @@
+Q1) Explain about the Marker interface?
+
+Answer:- Marker interface is an empty interface.
+         Generally if we want to group multiple objects to a special type then we make Marker interface.
+         
+         
+         we implement this type of interface in every class to bind them for special purpose.
+         
+         example:-
+         
+         package com.masai;
+
+    //marker interface
+       public interface Special {
+	
+       }
+
+
+     A.java:
+   ----------
+
+    package com.masai;
+
+    public  class A implements Special{
+	
+	
+	 void funA() {
+		
+		System.out.println("inside funA of A");
+	}
+	
+
+ }
+
+
+    Demo.java:
+----------------
+
+     package com.masai;
+
+     public class Demo {
+	
+
+	public void fun1(Special special) {
+		
+		//want to specify some specail behaviour 
+		
+		System.out.println("here special behaviour is applied");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Demo d1= new Demo();
+		
+		d1.fun1(new A());
+		
+	}
+}

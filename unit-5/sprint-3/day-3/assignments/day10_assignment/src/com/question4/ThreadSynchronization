@@ -1,0 +1,17 @@
+Q4/ Explain about thread synchronization(inter-thread communication).
+
+Answer:-It means two synchronized threads communicate each other.
+
+Two synchronized thread can communicate each other by using some methods present in Object class, those
+methods are wait(), notify(), notifyAll().
+
+By using above methods we can gain partial control on the scheduling mechanism which is supervised by the
+thread-scheduler.
+
+To gain this partial control the threads should have a sign of mutual understanding between them .they should be
+able to communicate with each other.
+
+Whenever we need to suspend a synchronized thread unconditionally then we use wait() method.
+Whenever we need to resume a suspended(waiting) thread then we use notify() method.
+
+this is known as thread-synchronization or inter-thread communication.

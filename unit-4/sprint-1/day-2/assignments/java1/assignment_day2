@@ -1,0 +1,87 @@
+Q1) Explain Type casting and its types with examples?
+
+Answer:- The process of converting one data type to another data type is known as type casting.
+
+Their are two type of type casting.
+
+a) Implicit Type Casting:-
+
+   The process of converting data from lower data type to higher data type is called as
+     Implicit Type Casting.
+     
+   example :
+         byte b=10;
+         int i = b;
+         System.out.println(b+" "+i);
+
+         int i=10;
+         byte b=i;
+         System.out.println(i+" "+b);
+         Status: Compilation Error, Possible loss of precision.
+         
+         byte b=65;
+         char c=b;
+         System.out.println(b+" "+c);
+         Status: Compilation Error
+         
+
+        char c='A';
+        int i=c;
+        System.out.println(c+" "+i);
+        Status: No Compilation Error
+        OUTPUT: A 65
+        
+b)Explicit Type Casting:-
+
+         The process of converting data from higher data type to lower data type is called as Explicit Type
+        Casting.
+        
+         To perform explicit type casting we have to use the following pattern.
+         P a = (Q) b;
+         (Q) → Cast operator
+         Where P and Q are two primitive data types, where Q must be either same as P or lower than P .
+       
+        Example :
+         int i = 10;
+         byte b = (byte)i;
+         System.out.println(i+" "+b);
+
+         byte b1=30;
+         byte b2=30;
+         byte b=(byte)(b1+b2);
+         System.out.println(b);
+         
+         int i=130;
+         byte b=(byte)i;
+          System.out.println(b);
+         // -128, -127, -126 .... 0, 1, 2...... 127
+          // 130 = 127+3
+        Status: No Compilation Error
+         OUTPUT: -126
+         
+         
+         
+         
+         
+Q2) Explain the difference between local and instance variables?
+
+Answer:-The variable which is declared inside the class but out side the method is known as instance variable.
+
+        The variable which is declared inside the method is known as local variable.
+        
+        
+      Example:-  
+      public class Demo {
+	
+	  // instance variable
+	   int y = 20;
+	
+	   public static void main(String[] args) {
+	
+		 //local variable 	
+		  int z =100;
+		
+		 System.out.println(x);
+		
+	}	
+}

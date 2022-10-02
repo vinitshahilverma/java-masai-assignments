@@ -1,0 +1,45 @@
+Q3) What is exception handling in java, Write the hierarchy of Exception class and, Mention some
+of the predefined Exception classes at least 5, and the reason when those exception class
+object is generated in our application.
+
+Answer:- The handling of abnormal termination of our application is known as Exception handling in java.
+         This type of termination can be handle with the help of try and catch block.
+         
+        Hierarchy:-
+        
+                                    Object
+                                       |         
+                                       |
+                                   Throwable
+                                       |
+                                       |
+              -------------------------------------------------------------------
+              |                                                                 |
+              |                                                                 |
+            Exceptions                                                       Error
+                |
+            RuntimeException
+            
+            
+          Some of the predefined Exception classes are:-
+          
+          1)java.lang.ArithmaticException :- It occur when some of the number is divided by 0;
+          
+          2)java.lang.NullPointerException :- It occur when some of the value occurs is null and we try to print it.
+                                            example-  
+                                                    String str = null;
+                                                    System.out.println(str); //NullPointerException.
+                                                    
+          3)java.lang.ClassCastException :- when we try to assign one type of class to another class.
+          
+          4)java.lang.ArrayOutOfBoundException:- when we try to access the array index which is not defined.
+          
+          5)java.lang.InputMismatchException :- When we try to give a different type of input which is not asked.
+                                                 
+                                                 Example:- If it asking for Interger type and we Enter String type than InputMisMatchException occurs.                                       
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    

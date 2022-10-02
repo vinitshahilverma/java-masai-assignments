@@ -1,0 +1,9 @@
+Q1) Differentiate between static and non-static variables?
+
+Answer:- Variables which are define with static keyword known as static variable,
+         while variable which are not define with the static key word known as non-static variable.
+         
+         Variables with static keyword are loaded to RAM statically, and we have to load the non-
+         static variables dynamically into the RAM by creating the object of that class.
+         
+         Initially non-static variables are loaded into the hard-disk in form of the byte-code.

@@ -1,0 +1,20 @@
+Q3) Explain the difference between abstract class and interface.
+
+Answer:- By using Abstract class we achieve partial abstraction in Java.
+ By using interface we achieve fully abstraction.
+ 
+ 
+ Abstract class needs to be extended by another class while interface needs to
+ be implemented by another class.
+ 
+ Abstract class can have class members like,private,protected while members of
+ interface by public abstract by default.
+ 
+ In Abstract class multiple extends are not possible but in Interface multiples
+ implementations are possible.
+ 
+ Abstract class provides the implementation of interface while Interface doesn't
+ provide the implementation of abstract class.
+ 
+ Abstract class can extended by using "extends" keyword while Interface can be 
+ implemented by using "implements" keyword. 

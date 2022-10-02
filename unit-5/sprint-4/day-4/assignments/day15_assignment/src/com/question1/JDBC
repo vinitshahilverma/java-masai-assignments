@@ -1,0 +1,25 @@
+Q1/- What is JDBC, Write a note on JDBC driver software.
+Answer:- Full form of JDBC is Java database connectivity.
+          
+         We need to store data somewhere so we use DBMS, which is excellent in data storage in secure and easily
+         retrieval manner but it is very poor in processing and presenting the data in user-understandable format.
+         
+         And java is excellent in presenting the data but java is very poor in storing the data.
+         
+         So inOrder to develop a powerful application we need to communicate our java application with the DB server.
+         
+         
+         JDBC driver softWare:-
+         
+          JDBC is a translation software written in Java according to the JDBC specification.
+          
+          Responsibility of JDBC driver software:-
+          
+          1.Establishing the Connection.
+          
+          2.Receiving the JDBC method calls (java method call) and translate them into DBMS understandable format.SQL
+            and forward them to the DataBase software.
+            
+          3.Translating the DataBase software given result into the Java format (Java objects) and returns that objects
+            to the JDBC client.
+          

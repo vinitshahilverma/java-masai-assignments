@@ -1,0 +1,47 @@
+
+Q● Establish Many-to-Many relationships between the Student and the Course
+table.
+
+Answer:-mysql> create table Student_Course
+    -> (
+    -> roll int,
+    -> cid int,
+    -> Foreign key(roll) references Student(roll),
+    -> Foreign key(cid) references Course(cid)
+    -> );
+
+Q● Write a SQL to enroll Amit in Java and Spring.
+
+Answer:- insert into Student_Course
+    ->  Values (2,10),
+    -> (2,20);
+
+Q Write a SQL to enroll Venkat in Java and React.
+
+Answer:- 
+       insert into Student_Course
+    -> values (1,10),
+    -> (1,40);
+
+Q Write a SQL to enroll Raj in Spring and Angular.
+
+Answer:-
+    insert into Student_Course
+    -> values (3,20),
+    -> (3,50);
+
+Q Write a SQL to enroll Suresh in Java, Hibernate and React.
+
+Answer:-
+       insert into Student_Course
+    -> values (5,10),
+    -> (5,30),
+    -> (5,40);
+
+Q Write a SQL to enroll Binay in React.
+ 
+Answer:-
+        insert into Student_Course
+    -> values (4,40);
+      
+

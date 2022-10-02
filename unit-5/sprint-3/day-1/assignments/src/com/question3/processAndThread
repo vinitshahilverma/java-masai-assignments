@@ -1,0 +1,22 @@
+Q3) Differentiate between process and thread.
+
+Answer:- Process:-
+
+        1) Process means any program is in execution.
+        2) It takes more time for creation and takes more time for context switching.
+        3) The process is less efficient in terms of communication.
+        4) Process switching uses an interface in an operating system.
+        5) If one process is blocked it will not affect the execution of other processes.
+        6) The process has its own Process Control Block,Stack and Address Space.
+        
+        Thread:-
+        
+        1) Thread means a segment of a process.
+        2) It takes less time for creation and takes less for context switching.
+        3) The thread takes less time to terminate.
+        4) Thread switching does not require calling an operating system and causes an interrupt to the kernel.
+        5) If a user-level thread is blocked, then all other user-level threads are blocked.
+        6) Since all threads of the same process share address space and other resources so any changes to the main thread may affect the behavior of the other threads of the process.
+        
+         
+         

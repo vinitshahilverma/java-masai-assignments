@@ -1,0 +1,11 @@
+Q2) Why multiple Inheritance is not supported in Java at the class Level?
+
+Answer:- Multiple Inheritance is not possible in Java at the class level because suppose we extends multiple 
+         class to one child class. It may happen they have same method names and when we compile the file,
+         
+         Complier cannot decide which method it should inherit.It will go into ambigutiy state. To prevent this
+         state it is not  possible to inheritance multiple classes to a single class.
+         
+         
+         Also at Interface level actually class takes all the accountability of the methods from the parent 
+         interface not the inheritance. That is why it is possible to implements multiple interface to a class.

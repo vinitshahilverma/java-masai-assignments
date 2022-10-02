@@ -1,0 +1,12 @@
+Q5) Differentiate between the Thread class and Runnable interface for creating a Thread?
+
+Answer:- When we extend Thread class, we can't extend any other class even we require.
+         When we implement Runnable, we can save a space for our class to extend any other class.
+         
+         When we extend Thread class, each of our thread creates unique object and associate with it.
+         When we implements Runnable, it shares the same object to multiple threads. 
+         
+         If we extend thread class than we can just create object of the class and start the run() through it.
+         If we implement runnable class than we can create the object of the class and than and than we have to 
+         create a new thread through it. And than we can call the start method through it.
+         

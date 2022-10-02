@@ -1,0 +1,24 @@
+Q3) Explain AutoBoxing and Auto UnBoxing with Examples.
+
+Answer:-converting primitives into the object(box) it is known as boxing and reverse 
+        is called unboxing.
+        
+         before java 1.5 inorder to add the primitives in the collection we need to wrap that
+         primitives to their corresponding wrapper class object.
+
+         int i=10;
+
+         Integer i1= Integer.valueOf(i); //boxing
+
+         int x=  i1.intValue(); //unboxing
+         
+         
+         from java 1.5 onwords  we have a concept called autoboxing and autounboxing.
+         Now java itself wrap the primitives into their corresponding wrapper class object.
+         we need not to write full length name of the wrapper class
+
+         int i =10;
+
+         Integer i1 = i;  //autoboxing
+
+         int x=i1; // autounboxing

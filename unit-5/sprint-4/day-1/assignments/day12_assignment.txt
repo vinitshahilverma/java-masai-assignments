@@ -1,0 +1,158 @@
+Day1-Basic SQL
+
+Q.no:-1 
+
+i)mysql> create table deposit
+    -> (
+    -> actno varchar(25),
+    -> cname varchar(20),
+    -> bname varchar(20),
+    -> amount int,
+    -> adate date
+    -> );
+
+ii)mysql> create table branch
+    -> (
+    -> bname varchar(20),
+    -> city varchar(20)
+    -> );
+
+iii)mysql> create table customer
+    -> (
+    -> cname varchar(20),
+    -> city varchar(20)
+    -> );
+
+iv)mysql> create table borrow
+    -> (
+    -> loanno varchar(5),
+    -> cname varchar(20),
+    -> bname varchar(20),
+    -> amount int
+    -> );
+
+
+Q.no-2 desc deposit;
+       desc branch;
+       desc customer;
+       desc borrow;
+
+Q.no-3 
+  
+i)insert into deposit values('100','Anil','VRCE',1000.00,'1995-03-01');
+   insert into deposit
+   -> values ('101','Sunil','MGROAD',5000.00,'1996-01-04'),('102','Rahul','KAROLBAGH',3500.00,'1995-11-17');
+   insert into deposit
+   -> values ('103','Madhuri','CHANDNI',1200.00,'1995-12-17'),('104','Pramod','MGROAD',3000.00,'1996-03-27'),('105','Sandip','KAROLBAGH',2000.00,'1996-03-31');
+
+ii)mysql> insert into branch
+    -> values ('VRCE','NAGPUR'),('KAROLBAGH','DELHI'),('CHANDNI','DELHI'),('MGROAD','BANGALORE');
+
+iii)mysql> insert into borrow
+    -> values ('201','Anil','VRCE',1000.00),('206','Rahul','KAROLBAGH',5000.00),('311','Sunil','MGROAD',3000.00),('321','Madhuri','CHANDNI',2000.00),('375','Pramod','MGROAD',8000.00);
+
+iv)mysql> insert into customer
+    -> values ('Anil','CALCUTA'),('Rahul','BARODA'),('Madhuri','NAGPUR'),('Pramod','NAGPUR'),('Sunil','DELHI');
+
+
+Q.no-4
+mysql> select * from borrow where amount BETWEEN 2000 and 3000;
+
+Q.no-5
+select * from deposit;
+
+Q.no-6
+ select cname,actno from deposit;
+
+
+Q.no-7
+select cname from customer where city='NAGPUR';
+
+Q.no-8
+select cname from deposit where adate>'1995-11-17';
+
+
+Qno:-9
+select actno,amount from deposit where adate between '1995-12-01' and '1996-06-01';
+
+Qno:-10
+ select * from deposit where cname like 'c%';
+
+Qno:-11
+select * from borrow where cname like '_u%';
+
+Qno:-12
+select * from deposit where bname='CHANDNI' or bname='MGROAD';
+
+
+Qno:13
+ select * from deposit where bname!='CHANDNI' AND bname!='MGROAD';
+
+Qno:14
+select * from deposit where amount>1000 order by cname;
+
+Qno:-15
+mysql> select * from deposit where amount>1000 order by cname desc;
+
+Qno:-16
+select * from borrow where cname like '__A%' or cname like '__D%';
+
+Qno:-17
+select * from borrow where amount not between 2000 and 8000;
+
+
+Qno:18
+select distinct * from deposit;
+
+
+
+Qno:19
+update deposit set amount= amount+(amount*0.1) where bname='VRCE';
+
+Qno:-20
+update deposit set amount= amount+(amount*0.1) where bname='VRCE' and cname='Anil';
+
+                                     
+
+                                        Basic SQL II
+
+
+mysql> insert into student
+    -> values ('vijay',150,'cse','chennai')
+    -> ,('sita',202,'etc','kolkata')
+    -> ;
+mysql> insert into student
+    -> values ('ravi',300,'eee','delhi')
+    -> ,('basu',165,'etc','chennai')
+    -> ,('rashmi',107,'etc','rkl')
+    -> ,('karan',111,'cse','ctc')
+    -> ,('rekha',117,'bme','bbsr')
+    -> ;
+
+
+Q.no:-1
+select branch,count(branch) as numberofstudent from student group by branch;
+
+Qno:-2
+select branch,count(branch) as numberofstudent from student where branch like 'e%' group by branch;
+
+Qno:-3
+ alter table student add marks bigint;
+
+Qno:-4
+alter table student modify name varchar(25);
+
+Qno:-5
+delete from student where branch='etc';
+
+Qno:-6
+ alter table student rename to studentinformation;
+
+Qno:-7
+ truncate table studentinfromation;
+
+Qno:-8
+drop table studentinformation;
+
+
+

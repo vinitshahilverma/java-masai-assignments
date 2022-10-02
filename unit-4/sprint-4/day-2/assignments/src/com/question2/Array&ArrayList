@@ -1,0 +1,14 @@
+Q2) What is the difference between ArrayList and Array?
+
+Answer:- The main difference between Array and ArrayList is that in Array we have to define the 
+         size of the array initially before using. And in ArrayList we need not to define the 
+         size of the ArrayList.
+         
+         In Array we can not add elements beyond it's size.
+         In ArrayList we can add multiple objects without thinking about the size;
+         
+         In Array we can find the length by using Array.length;
+         In Array we have to write Array.size() to get the length of the ArrayList;
+         
+         
+         

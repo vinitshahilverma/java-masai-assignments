@@ -1,0 +1,18 @@
+Q4) What are the different states of a thread, or what is thread Life-cycle?
+
+Answer:- Life-cycle of a Thread(State of a thread):-
+
+         In java,a thread always exists in any one of the following states. These states are:-
+         
+          1) New state : - Thread t = new Thread(r);
+          
+          2) Runnable state :- t.start();
+          
+          3) Running state:- Selected to run by the Thread scheduler.
+          
+          4) Blocked state:-  sleep();
+                              wait();
+                              join();
+                              
+                              
+          5) Dead state : - if run() method completes.          

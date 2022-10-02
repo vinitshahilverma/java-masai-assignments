@@ -1,0 +1,7 @@
+Q3) Explain the difference between equals() and HashCode() Method.
+
+Answer:- equals() checks if the two objects are same or not and returns the value in 
+         boolean type.
+         
+         while HashCode() methods generates the new address number in hexadecimal and 
+         return the Integer type data.

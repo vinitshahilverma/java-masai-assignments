@@ -1,0 +1,24 @@
+Question 4: What will be the output of below code and why?
+public class CheckOutput {
+public static void main(String args[])
+{
+try
+{
+System.out.print("A");
+int num = 99/0;
+System.out.print("B");
+}
+catch(ArithmeticException ex)
+{
+System.out.print("C");
+}
+catch(Exception ex)
+{
+System.out.print("D");
+}
+System.out.print("E");
+}
+}
+
+Answer:- The outPut will be "C" because when divided by 0; it always give a ArithmeticException  and this will be handel by the ArithmeticException
+          catch block. Because java doesn't know how to print Infinity.

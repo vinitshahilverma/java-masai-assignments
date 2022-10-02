@@ -1,0 +1,5 @@
+Q5/- What is the difference between the sleep and wait method?
+
+Answer:- Sleep makes the Thread to pause for the provided time.
+
+         wait makes the Thread to wait until it gets notify() from the synchronized thread.

@@ -1,0 +1,10 @@
+Q3/- What is the Serialization and deSerialization in Java ?
+
+Answer:- Serialization is the conversion of the state of an object into a byte stream. which 
+         we can then save to a database or transfer over a network.
+         
+         The reverse operation of serialization is called deSerialization where byte-stream 
+         is converted into an object.
+         
+         The serialization and deSerialization process is platform-independent, it means you can serialize an
+         object on one platform and deSerialize it on a different platform.

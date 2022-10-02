@@ -1,0 +1,129 @@
+Q1/- Explain the meaning of the deadlock in multithreaded application, when it can occur in
+      multithreading applications.Write one example of deadlock.
+      
+Answer:- DeadLock is condition in which two or more Threads are waiting for each other to notify;
+         Synchronization is main reason for the DeadLock;
+         
+         Suppose we have created two threads and threads and they are waiting for each other to notify so that they can execute.
+         Since They are waiting for each other to notify, than they keep waiting for each other to a infinity time.
+         This condition is called DeadLock condition.
+         
+         Their is no solution for deadlock but it can be prevented by removing Synchronized keyword from any one of the methods.
+         
+         Example:--
+         
+         class A{
+         
+          public synchronized void funA(B b1){
+          
+            System.out.println("FunA of class A starts");
+            
+            b1.fun1;
+            
+            System.out.println("FunA of class A ends");
+          
+          }
+          
+          public synchronized void fun1(A a1){
+          
+             System.out.println("Inside funA of class A");
+                  
+          }
+          
+         }
+         
+         ========================================================================
+         
+         class B{
+         
+          public synchronized void funB(A a1){
+          
+            System.out.println("FunB of class B starts");
+            
+            a1.fun1;
+            
+            System.out.println("FunA of class A ends");
+          
+          }
+          
+          public synchronized void fun1(B b1){
+          
+             System.out.println("Inside funB of class B");
+                  
+          }
+          
+         }
+         
+         =================================================================================
+         
+         class ThreadA extends Thread{
+         
+            A a1;
+            B b1;
+            
+            public ThreadA(A a1,B b1){
+            
+               this.a1 = a1;
+               this.b1 = b1;
+            
+            }
+            
+            @Override
+            public void run(){
+              
+               a1.funA(b1);
+            
+            }
+         }
+         
+         ====================================================================================
+         
+          class ThreadB extends Thread{
+         
+            A a1;
+            B b1;
+            
+            public ThreadB(A a1,B b1){
+            
+               this.a1 = a1;
+               this.b1 = b1;
+            
+            }
+            
+            @Override
+            public void run(){
+              
+               b1.funB(a1);
+            
+            }
+         }
+         
+         ===========================================================================================
+         
+         class Main{
+         
+            public static void main(String[] args){
+            
+               A a1 = new A();
+               B b1 = new B();
+               
+               ThreadA a = new ThreadA(a1,b1);
+               ThreadB b = new ThreadB(a1,b1);
+               
+               a.start();
+               b.start();
+               
+            
+            }
+         }
+         
+         
+         ==================================================================================================
+         
+         
+         In the above condition  both class A and class b are synchronized in such a way that they are waiting for each others
+         for forever which occurs the DeadLock condition.
+         
+         
+         
+         

@@ -1,0 +1,7 @@
+What is the use of ‘this’ and ‘super’ keywords in java ? Explain with an example.
+
+Answer:- this keyword is use to call the non static variable of the same class from the constructor of the same 
+class while super keyword is use to call the constructor or the overriding method of the parent class from the child 
+class constructor or Override method.Super keyword is a part of inheritance.
+
+Both of them can only be used in the non static methods or non static Constructor.

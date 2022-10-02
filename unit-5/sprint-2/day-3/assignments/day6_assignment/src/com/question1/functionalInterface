@@ -1,0 +1,65 @@
+Q1/ - Write down some predefined Functional interfaces in the java library at least 4 interfaces, with their methods.
+
+Answer: - Predefined functional Interfaces are :-
+
+         1) Predicates :- It return boolean value and takes one object which can be Generic type.
+            
+            method:-    public class Main implements Predicate<Student>{
+
+                                	@Override
+	                                public boolean test(Student t) {
+		                            // TODO Auto-generated method stub
+		                            return false;
+	                                  }
+
+                                   }
+                                   
+          2) Supplier : - It takes a generic type and returns the same type.
+          
+             method:- public class Main implements Supplier<String>{
+
+	                  @Override
+	                 public String get() {
+		
+		               return "hello";
+		
+	                   }
+                  }
+
+            3) Consumer : - It takes a generic type of data and return nothing.
+                            we can perform multiple task on it.
+                            
+                            public class Main implements Consumer<Student>{
+
+	                        @Override
+	                       public void accept(Student t) {
+		                   System.out.println(t);
+		
+	                        }
+
+                          }
+                          
+                          
+             4) Function : - It represents a function that accepts one argument and returns a result.
+                         
+                         public class Main implements Function< Student, String>{
+
+	                    @Override
+	                    public String apply(Student t) {
+	                    
+		                if(t.getMarks()>500) {
+			            return "Yes";
+		                }
+		                  else
+		                       return "No";
+	                        }
+
+                          }
+
+             
+                           
+     
+
+
+       
+            

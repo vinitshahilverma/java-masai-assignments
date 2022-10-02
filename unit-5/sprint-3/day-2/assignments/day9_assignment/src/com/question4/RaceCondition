@@ -1,0 +1,31 @@
+Q4/- What is a Race condition, How will you solve the Race condition,explain with an
+     Example.
+     
+     
+Answer:- A race-condition is a condition in which the critical section(a part of the program where
+         shared memory is accessed) is concurrently executed by two or more threads.It leads to 
+         incorrect behavior of a program.
+         
+         In layman terms, a race condition can be defined as, condition in which two or more threads 
+         compete together to get certain shared resources.
+         
+         For example, if thread A is reading data from the linked list and another thread B is trying to delete the same data.
+         This process leads to a race condition that may result in run time error.
+         
+         
+         To solve the data inconsistency problem in java synchronized keyword is used.
+         
+         
+         We can our code synchronized so that one by one thread can enter and there will be no chance of race
+         condition.
+         
+         void fun1(){
+          System.out.println("do something...");
+         
+          synchronized(this){--//here if a thread gets the lock of current obj then it is allowed to execute
+          //this block
+           System.out.println("do some more thing1");
+          }
+
+         }
+         

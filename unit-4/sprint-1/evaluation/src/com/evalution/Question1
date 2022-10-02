@@ -1,0 +1,15 @@
+Q1) Explain why Java is platform independent?
+
+Answer:- Java is platform independent because of JVM. JVM takes the java source code, compile it 
+
+         and convert it into byte-code. The byte-code can be understand by any of the platform.
+        
+         Suppose we are working on the windows than JVM takes the source code and translate 
+        
+         it into byte-code which can understandable by windows in its native code.
+         
+         Similarly if we are on Mac or Linux JVM will translate the source code into respective 
+        
+         operating system understandable native code.
+        
+         This feature of Java made it platform independent.

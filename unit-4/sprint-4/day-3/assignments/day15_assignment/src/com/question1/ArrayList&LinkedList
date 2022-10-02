@@ -1,0 +1,17 @@
+Q1) Explain the difference between ArrayList and LinkedList
+
+Answer:- In ArrayList memory location of the element is contiguous.
+         In LinkedList memory location of the element is not contiguous.
+         
+         In ArrayList if we delete a element from the middle than too many shifting
+         operation are required.
+         In LinkedList shifting operation are not required.
+         
+         
+         ArrayList is better for storing and accessing data.
+         LinkedList is better for manipulating data.
+         
+         ArrayList internally uses a dynamic array to store the data.
+         LinkedList internally uses a doubly linked list to store the elements.one for data,
+         second for storing the address of the second data.
+         

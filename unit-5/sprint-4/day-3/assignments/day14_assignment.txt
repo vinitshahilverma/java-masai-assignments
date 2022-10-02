@@ -1,0 +1,250 @@
+Qno:-1 
+create table programmer
+    -> (
+    -> EmpNo bigint primary key,
+    -> projId int,
+    -> LastName varchar(30),
+    -> firstName varchar(30),
+    -> hireDate date,
+    -> language varchar(15),
+    -> taskNo int,
+    -> privilage varchar(25)
+    -> );
+
+Qno2:-
+mysql> insert into programmer
+    -> values (201,'NPR','Gupta','Saurav','1995-01-01','VB',52,'Secret'),
+    -> (390,'KCW','Ghosh','Pinky','1993-05-01','JAVA',11,'TopSecret'),
+    -> (789,'RNC','Agarwal','Praveen','1998-03-08','VB',11,'Secret'),
+    -> (134,'TIPPS','Chaudhury','Supriyo','1995-07-15','C++',52,'Secret'),
+    -> (896,'KCW','Jha','Ranjit','1997-06-15','JAVA',10,'TopSecret'),
+    -> (345,'TIPPS','Jhon','Peter','1999-11-15','JAVA',52,NULL),
+    -> (563,'NITTS','Anderson','Andy','1994-08-15','C++',89,'Confidential');
+
+Qno3:-
+
+a) update programmer set projId='NITTS',language='C++' where lastName='Gupta' and firstName ='Saurav';
+
+b) delete from programmer where firstName='Supriyo' and lastName = 'Chaudhury';
+
+c) alter table programmer drop column taskNo;
+
+
+Qno4:-
+create table department
+    -> (
+    -> DeptNo int unique,
+    -> Dname varchar(30) NOT NULL,
+    -> Loc varchar(20) NOT NULL
+    -> );
+
+Qno5:-
+ alter table department modify Dname varchar(50);
+
+Qno6:-
+  insert into department values (10,'Accounts','NewYork');
+  insert into department values (20,'Marketing','Chicago');
+  insert into department values (30,'Sales','Atlanta');
+  insert into department values (40,'Research','Ohio');
+
+Qno7:-
+create table Employee
+    -> (
+    -> empNo int primary key,
+    -> Ename varchar(20) NOT NULL,
+    -> Job varchar(20) NOT NULL,
+    -> Sal int NOT NULL,
+    -> HireDate date NOT NULL,
+    -> Deptno int,
+    -> foreign key (Deptno) references department(deptNo)
+    -> );
+
+Qno8:-
+ alter table employee add MGR int;
+
+Qno9:-
+insert into employee
+    -> values (7001,'James','clerk',3000,'2005-06-05',10,NULL),
+    -> (7002,'Mason','president',10000,'2005-06-06',20,NULL),
+    -> (7003,'Clark','manager',5000,'2004-06-04',20,NULL),
+    -> (7004,'Jhon','manager',6000,'2005-06-08',10,NULL),
+    -> (7005,'Blake','clerk',3500,'2005-06-09',30,NULL);
+
+Qno10:-
+ create table Grade
+    -> (
+    -> GradeNo int primary Key,
+    -> Hi_sal int NOT NULL,
+    -> Lo_sal int NOT NULL
+    -> );
+
+Qno11:-
+ Alter table Grade drop column Lo_sal;
+
+Qno12:-
+ Alter table Grade add Lo_sal int NOT NULL;
+
+Qno13:-
+insert into Grade
+    -> values (1,2000,500),(2,3500,2100),(3,6000,3600),(4,15000,6100);
+
+Qno14:-
+create table Employee_back(select empNo,ename,job,sal,hiredate,deptno,mgr from employee);
+
+Qno15:-
+update employee_back set sal=3500 where ename = 'James';
+
+Qno16:-
+update employee_back set sal=sal+1000 where job='manager';
+
+Qno17:-
+update employee_back set sal=sal-100 where deptno = 10;
+
+Qno18:-
+alter table employee add COMM int;
+
+Qno19:-
+update employee set COMM = 0;
+
+Qno20:-
+delete from employee where hireDate<'2005-06-06';
+
+Qno21:-
+ delete from employee where sal < 3000;
+
+Qno22:-
+select * from employee_back where deptno=10;
+
+Qno23:-
+select * from employee where job='manager' and deptNo=10;
+   
+Qno24:-
+select * from employee_back where sal between 3000 and 5000;
+
+Qno25:-
+select * from employee_back where hireDate > '2005-07-10';
+
+Qno26:-
+select * from employee_back where job= 'manager' or job='president';
+
+Qno27:-
+select * from employee_back where job='manager'and (deptNo=10 or deptNo=20);
+
+Qno28:-
+update employee set comm=500 where deptno=10;
+
+Qno29:-
+select * from employee where comm=null;
+
+Qno:30:-
+select * from employee_back where job!='manager' and job!='president';
+
+Qno:-31
+select * from employee_back where ename Like 'j%';
+
+Qno:-32
+select * from employee_back where ename Like '%a%';
+
+Qno:-33
+ select sal,comm,(sal+comm)bonus from employee group by sal;
+
+Qno:-34
+select ename,job,sal,sum(sal*1.1) increased_salary from employee_back where job='manager' group by ename;
+
+Qno:-35
+update employee_back set sal=sal*1.1 where job='manager';
+
+Qno:-36
+select * from employee_back order by ename desc;
+
+Qno:-37
+select * from employee_back order by deptno,job;
+
+Qno:-40
+select ename,POSITION('a'IN ename) from employee_back as MatchPosition;
+
+Qno:-41
+select substr(ename,-3) from employee_back;
+
+Qno:-42
+ select ename,length(ename) from employee_back;
+
+Qno:-43
+select sysdate() from dual;
+
+Qno:-44
+select ename,hireDate,adddate(hireDate,Interval 5 YEAR) After_5_Years from employee;
+
+Qno:-45
+select Last_Day(sysDate()) from dual;
+
+Qno:-46
+ select hireDate,Last_Day(hireDate) from employee;
+
+Qno:-47
+select ename,hiredate,timestampdiff(Month,hiredate,'2008-06-08') from employee;
+
+Qno:-49
+Drop table employee_back;
+
+Qno:-50
+select deptno,count(ename) from employee where deptNo=10 group by deptNo;
+
+Qno:-51
+select deptno,count(*) from employee group by deptNo;
+
+Qno:-52
+select job,count(*) from employee group by job;
+
+Qno:-53
+select count(*) from employee;
+
+Qno:-54
+select ename,max(sal) from employee;
+
+Qno:-55
+select ename,max(comm) from employee;
+
+Qno:-56
+select ename,min(sal) from employee;
+
+Qno:-57
+select deptno,avg(sal) from employee group by deptno;
+
+Qno:-58
+select distinct(job) from employee;
+
+Qno:-59
+ select deptno,count(ename) from employee group by deptNo having count(ename) > 3;
+
+Qno:-60
+select deptNo,sum(sal) from employee group by deptNo;
+ 
+Qno:-62
+select job,sum(sal),count(ename) from employee group by job having count(ename)>5;
+
+Qno:-64
+create table employee_dup like employee;
+
+Qno:-65
+select * from employee where deptNo = (select deptNo from employee where ename = 'Clark');
+
+Qno:-66
+ select * from employee where sal = (select sal from employee where ename='Blake');
+
+Qno:-67
+ select * from employee where sal > (select avg(sal) from employee);
+
+Qno:-68
+select e.empNo,e.ename,e.job,e.sal,e.hireDate,d.deptNo,d.dname,d.Loc from employee e Inner join department d ON d.deptNo = e.deptNo where d.loc='NewYork' or d.loc='Chicago';
+
+Qno:-69
+select * from employee where sal > all (select sal from employee where ename = 'Blake' or ename='Clark');
+
+Qno:-70
+update employee set sal=sal*1.1 where deptno = (select deptNo from department where loc= 'Chicago');
+
+
+
+
+

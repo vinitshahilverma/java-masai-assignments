@@ -1,0 +1,18 @@
+Question 4: Explain Generics in Java and Its Importance with example?
+
+Answer:- 1) The main objective of Generics is to achieve typeSafety.
+         2) It makes the code stable by detecting the bugs at compile time.
+         3) Generics concept mostly used with the collection frame work related classes,but we can apply the 
+            generics concept without collection frame work.
+         4) Generics does not support primitive data it only supports objects.
+         5) We can create our own generic classes or generics methods and that class or method can work with 
+            any kind of data.
+            
+            
+           Advantage of Generics:-
+           
+         1) Type checking at compile time.
+         2) Get rid of down casting problem.
+         
+         
+         
