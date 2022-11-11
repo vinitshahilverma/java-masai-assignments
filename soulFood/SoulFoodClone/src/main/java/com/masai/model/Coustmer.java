@@ -31,7 +31,7 @@ public class Coustmer {
 	private String gender;
 	private String mobileNumber;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 	private String email;
 	

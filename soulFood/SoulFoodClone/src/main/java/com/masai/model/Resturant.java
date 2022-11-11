@@ -32,7 +32,7 @@ public class Resturant {
 	private Integer resturantId;
 	private String resturantName;
 	
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 	private String mangaerName;
 	private String contactNumber;

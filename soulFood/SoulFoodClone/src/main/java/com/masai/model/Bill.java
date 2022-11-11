@@ -1,13 +1,17 @@
 package com.masai.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,9 +29,9 @@ public class Bill {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer billId;
-	private LocalDateTime billDate;
+	private LocalDate billDate;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private OrderDetails order;
 	private Integer totalItem;
 	private Double totalCost;

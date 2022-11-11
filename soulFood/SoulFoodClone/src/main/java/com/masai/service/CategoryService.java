@@ -6,5 +6,8 @@ import com.masai.model.Category;
 public interface CategoryService {
 	
 	public Category addCategory(Category category)throws CategoryException;
+	
+	
+	
 
 }

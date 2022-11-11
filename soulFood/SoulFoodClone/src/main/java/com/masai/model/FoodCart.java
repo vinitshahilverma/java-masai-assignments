@@ -29,11 +29,8 @@ public class FoodCart {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer CartId;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Coustmer coustmer;
-	
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<OrderDetails> orderList = new ArrayList<>();
 	
 
 	@OneToMany(cascade = CascadeType.ALL)

@@ -7,5 +7,7 @@ import com.masai.model.Category;
 
 @Repository
 public interface CategoryRepo extends JpaRepository<Category, Integer>{
+	
+	
 
 }
