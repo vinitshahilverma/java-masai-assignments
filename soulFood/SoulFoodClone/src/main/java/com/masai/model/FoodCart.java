@@ -35,7 +35,7 @@ public class FoodCart {
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<OrderDetails> orderList = new ArrayList<>();
 	
-	@JsonIgnore
+
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Item> list = new ArrayList<>();
 
