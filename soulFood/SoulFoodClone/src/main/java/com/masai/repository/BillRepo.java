@@ -15,6 +15,7 @@ public interface BillRepo extends JpaRepository<Bill, Integer>{
 	@Query("from Bill where billDate<=?1 and billDate>=?2")
 	public List<Bill> getBillByDate(LocalDate startDate,LocalDate endDate);
 	
-	
+	@Query("Select b from Bill b where orderid=?1")
+	public Bill getBillByOrderId(Integer id);
 
 }

@@ -103,9 +103,9 @@ public class BillServiceImpl implements BillService{
 		
 		List<Bill> list = new ArrayList<>();
 		
-		Coustmer coustmer = cRepo.findById(custId)
-		                         .orElseThrow(() -> new CoustmerException("No Coustemer found with the id: "+custId));
-		
+//		Coustmer coustmer = cRepo.findById(custId)
+//		                         .orElseThrow(() -> new CoustmerException("No Coustemer found with the id: "+custId));
+//		
 		
 		                     
 		    
@@ -113,9 +113,27 @@ public class BillServiceImpl implements BillService{
 	}
 
 	@Override
-	public Double CalculateTotalCost(Bill bill) throws BillException {
-		// TODO Auto-generated method stub
-		return null;
+	public Double CalculateTotalCost(Integer id) throws BillException {
+		
+		 Bill b1 = bRepo.findById(id)
+ 		        .orElseThrow(()-> new BillException("Bill details not found..."));
+		 
+		 return b1.getTotalCost();
+		
+	}
+
+	@Override
+	public Bill getBillByOrderId(Integer Id) throws BillException {
+		
+		Bill bill = bRepo.getBillByOrderId(Id);
+		
+		if(bill==null) {
+			throw new BillException("Bill details not found...");
+		}
+		
+		
+		return bill;
+		
 	}
 
 }

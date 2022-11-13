@@ -29,6 +29,8 @@ public class FoodCart {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer CartId;
+	
+	@JsonIgnore
 	@OneToOne(cascade = CascadeType.ALL)
 	private Coustmer coustmer;
 	

@@ -78,5 +78,22 @@ public class BillController {
 		
 	}
 	
+	
+	@GetMapping("/getBillByOrderId/{id}")
+	public ResponseEntity<Bill> getBillByOrderIdHandler(@PathVariable("id")Integer id) throws BillException{
+		
+		Bill bill1 = bService.getBillByOrderId(id);
+
+		return new ResponseEntity<Bill>(bill1,HttpStatus.OK);
+	}
+	
+	
+	@GetMapping("/getTotalAmount/{id}")
+	public ResponseEntity<Double> getTotalAmountHandler1(@PathVariable("id")Integer id) throws BillException{
+		
+		Double bill1 = bService.CalculateTotalCost(id);
+
+		return new ResponseEntity<Double>(bill1,HttpStatus.OK);
+	}
 
 }

@@ -11,6 +11,7 @@ import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -20,6 +21,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
+@EqualsAndHashCode
 public class Coustmer {
 	
 	@Id
@@ -35,5 +37,7 @@ public class Coustmer {
 	private Address address;
 	private String email;
 	
+//	@OneToOne(cascade=CascadeType.ALL)
+//	private FoodCart cart;
 
 }

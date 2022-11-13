@@ -22,6 +22,8 @@ public interface BillService {
 	
 	public List<Bill> viewBillByCoustmerId(Integer custId)throws BillException,CoustmerException;
 		
-	public Double CalculateTotalCost(Bill bill)throws BillException;
+	public Double CalculateTotalCost(Integer id)throws BillException;
+	
+	public Bill getBillByOrderId(Integer Id)throws BillException;
 
 }
