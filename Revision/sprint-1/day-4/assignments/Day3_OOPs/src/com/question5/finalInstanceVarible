@@ -1,0 +1,33 @@
+Ques 5: Observe the following code snippet
+
+       class Math {
+           public final double secret = 2;
+         }
+         
+         
+        class ComplexMath extends Math {
+                public final double secret = 4;
+         }
+         
+         
+        public class InfiniteMath extends ComplexMath {
+               public final double secret = 8;
+               
+              public static void main(String[] numbers) {
+                    Math math = new InfiniteMath();
+                    System.out.print(math.secret);
+                 }
+         }
+         
+         
+        What will be the output of above code?
+        a. 2
+        b. 4
+        c. 8
+        d. The code does not compile.
+        
+        Answer:- a.2 
+                 
+                 Answer will be 2 because it will allow us to create final variable in different 
+                 class with same signature but if we try to call with the parent class variable 
+                 it will give the result of the final variable of the parent class.

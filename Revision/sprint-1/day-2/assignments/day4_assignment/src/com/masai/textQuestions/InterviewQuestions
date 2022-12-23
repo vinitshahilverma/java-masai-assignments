@@ -1,0 +1,48 @@
+Question 1: How to convert a Array into ArrayList and vice-versa? Write example code snippet.
+
+Answer:-  Array to ArrayList:-there are three ways:-
+
+          1. List<> list = Arrays.asList(array);
+          2. Collections.addAll(list,arr);
+          3. using for loop;
+              for(int i=0; i<arr.length; i++){
+                 list.add(arr[i]);
+              }
+              
+          ArrayList to Array :- four ways
+          
+          1.for loop Normal.
+          2.for loop enhanced.
+          3.stream Api.
+          4. arr[] = List.toArray();
+          
+Question 2: Why collections are used in java if everything can be implemented using Array? 
+
+Answer:- 1. Due to dynamic nature of collections.
+         2. we can only add homogeneous data in array but in collection it can both type of 
+            homogeneous and heterogeneous.
+            
+     
+Question 3: What are fail-fast and fail-safe collection iterations?
+Answer:- Fail-fast iterator abort the operation as soon as it gets the failure but 
+         fail-safe iterator doesn't abort the operation it tries to avoid the failure 
+         as much as possible.
+
+
+Question 4: Difference between Iterator and ListIterator?
+Answer:- 
+        Through Iterator we can iterate in unidirectional but through ListIterator we can iterate 
+        in bidirectional.
+        
+        
+Question 5: Explain the real situation use of HashMap, HashSet and LinkedList collections?
+
+Answer:-  
+          LinkedList used in music playList.
+          
+          HashMap use in contact list use to store person name  with mobile Number.
+          
+          HashSet use to store unique data like email id. Where we have to store only single copy.
+
+
+         

@@ -1,0 +1,11 @@
+Question 3: Observe the following code and answer
+
+→ Write which modifier can be used in above written code snippet..
+
+a. Only protected can be used.
+B. public and protected both can be used.
+C. public, protected, and private can be used.
+d. Only public can be used.
+
+Answer:-   Public and Protected both can be used. 
+           Because the visibility can't be reduce.It must be Public and Protected.

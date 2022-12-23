@@ -1,0 +1,86 @@
+Ques 1: Name some important classes available in java.io package?
+
+Answer:- There are basically two types of classes in java :-
+
+        1) Character Oriented Classes These type of classes is used to read or write a file which 
+           contains only characters not binary data.
+           
+        2) Byte Oriented Classes These type of classes is used to read or write , copy or paste a 
+           file which contains byte code like images.Ex:- ObjectOutputStream with fileOutputStream 
+           for writing and ObjectInputStream with FileInputStream for reading.
+           
+Ques 2: Difference between FileReader and BufferedFileReader?
+
+Answer:- FileReader:- 
+         1) We have to read data char by char. 
+         2) It doesn't need another reader object to communicate with file.
+         3) Weaker performance Internally.
+         
+         BufferedFileReader:- 
+         1) We have to read data line by line.
+         2) It need another reader object to communicate with file.
+         3) Better performance internally.
+         
+Ques 3: What is the most efficient way to read the content of a text file according to you in java?
+
+Answer:- If we talk about java.io package then bufferedReader is the best reader according to me because 
+         we can read complete line on one go.using methods likeBufferedReader 
+         br=new BufferedReader(new fileReader("abc.txt"));String s=br.readLine(); //using this method.
+         But if we talk about nio package then we have more powerful tools like path ,paths and file.
+         using method like :-
+             path p=paths.get("abc.txt");
+            List<String> list= Files.readAllLine(p);
+            
+Ques 4: How to process binary file using java (i.e. reducing the pixels an image file).
+        Give the rough idea on how would you process it using inbuild library/external libraries
+        in java?
+        
+Answer:- Here to copy the file we use 
+
+         FileOutputStream  fos=new FileOutputStream ("Location where the file has to store ");
+         int i=fis.read();
+         while(i!=-1){
+         fos.write(i);
+         i=fis.read();} //close and flush methods.
+         
+         We can use FileReader and Filewriter also but the image will not be copied successfully 
+         since image is a byte oriented file not a character oriented file. 
+         
+Ques 5: Why there are unchecked exceptions are available in java if not complain by
+        compiler. Why this segregation of checked and unchecked exceptions?
+        
+Answer:- There is segregation of checked and unchecked exception because there are some exceptions which the 
+         compiler know can come so it warns in advance that a exception can occur to either handle it or declare it.
+         Few Checked Exceptions are:- 
+         1) IoException :- When there is a possibility that a file is not present at the given location.
+         2) ClassNotFoundException :- When we don't know if the class id present or not.
+         
+        Few UnChecked Exceptions:- 
+        1) ArthmeticException:- Occur when there is some calculation error.
+        2) NullPointer Exception :- Occur when we over run a loop.  
+        
+Ques 6: Can you throw another exception from a Catch block. Write an example if yes
+
+Answer:- Yes we can throw another exception from catch block.
+
+
+         try {
+			
+            Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter a number");
+			
+		    int y = sc.nextInt();
+			
+			int n = 20/0;
+			
+			System.out.println(n);
+			
+		}
+		catch (ArithmeticException ae) {
+			// TODO: handle exception
+			System.out.println(ae.getMessage());
+            
+			throw new InputMismatchException("Please Enter valid input");
+		}      
+     

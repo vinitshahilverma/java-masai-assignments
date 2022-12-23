@@ -1,0 +1,45 @@
+Ques 4: Observe and answer.. also try to run and play around the code.
+
+     abstract class Car {
+            static {
+              System.out.print("1");
+             }
+             
+             public Car(String name) {
+              super();
+              System.out.print("2");
+             }
+             
+          {
+            System.out.print("3");
+          }
+         }
+         
+         
+          public class BlueCar extends Car {
+          {
+            System.out.print("4");
+           }
+           
+          public BlueCar() {
+              super("blue");
+               System.out.print("5");
+           }
+           
+            public static void main(String[] gears) {
+               new BlueCar();
+            }
+           }
+           
+           
+        What will be the output of above code snippet?
+        
+        a. 23451
+        b. 12354
+        c. 13245
+        d. The code does not compile
+        
+        
+Answer:- 13245
+         
+

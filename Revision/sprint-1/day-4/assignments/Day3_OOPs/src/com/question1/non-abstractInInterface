@@ -1,0 +1,18 @@
+Question 1: Can we have a non-abstract method inside an interface?
+
+Answer:- Yes,from java-8 on-wards we can have default and static methods inside in interface.
+         But this method should have a body.
+         
+         Example:-
+         
+         public interface Main {
+	
+	     default void trying() {
+		    System.out.println("Inside the default method");
+	     }
+	
+         static void fun1() {
+    	    System.out.println("Inside the static method");
+         }
+
+         }

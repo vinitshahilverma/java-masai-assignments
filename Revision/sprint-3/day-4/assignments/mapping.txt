@@ -1,0 +1,241 @@
+Problem 1 : Create a LEFT JOIN of tables:
+department
+location
+using the location_id column. Display all columns in the result.
+
+Answer:- select * from department LEFT join location on department.location_id = location.location_id;
+
+Problem 2 : Create a LEFT JOIN of tables:
+* department
+* location
+
+using the location_id column. Display the following columns in the output table:
+* department_id
+* department_name
+* street_address
+* city
+
+Answer:-select d.department_id,d.department_name,l.street_address,l.city from department d LEFT join location l on d.location_id = l.location_id;
+
+
+
+Problem 3 : Create a LEFT JOIN (in the given order) of tables:
+* department
+* location
+* country
+using the location_id and country_id columns respectively. Display all columns 
+in the result table.
+
+Answer:-select * from department d left join location l on d.location_id=l.location_id LEFT join country c on l.country_id=c.country_id;
+
+Problem 4 : Create a LEFT JOIN of tables:
+* department
+* location
+* country
+using the location_id and country_id columns respectively. In the result table, 
+display the columns:
+* department_id
+* department_name
+* street_address
+* city
+* country_name
+
+Answer:- select d.department_id,d.department_name,l.street_address,l.city,c.country_name from department d left join location l on d.location_id=l.location_id LEFT join country c on l.country_id=c.country_id;
+
+Problem 5 : Create a LEFT JOIN of tables:
+* employee
+* job
+using the job_id column. Display all columns in the result table.
+
+Answer:-select * from employee LEFT join job on employee.job_id=job.job_id;
+
+Problem 6 : Create a LEFT JOIN of tables:
+* employee
+* job
+using the job_id column. In the output table, display the following columns:
+* employee_id
+* email
+* salary
+* job_title
+
+Answer:- select e.employee_id,e.email,e.salary,j.job_title from employee e LEFT join job j on e.job_id=j.job_id;
+
+
+Problem 7 : The following query is given:
+
+SELECT
+  t1.employee_id,
+  t1.email,
+  t1.salary,
+  t2.job_title
+FROM
+  employee AS t1
+LEFT JOIN job AS t2 ON t1.job_id = t2.job_id;
+
+Modify the above query to extract the rows with salary greater than 8000. Sort 
+the result in descending order by salary.
+
+Answer:- SELECT
+  t1.employee_id,
+  t1.email,
+  t1.salary,
+  t2.job_title
+FROM
+  employee AS t1
+LEFT JOIN job AS t2 ON t1.job_id = t2.job_id  where t1.salary>8000 order by t1.salary DESC;
+
+
+Problem 8 : Create a LEFT JOIN of tables:
+* employee
+* job
+* department
+using the job_id and department_id columns respectively. In the output table, display the following columns:
+* employee_id
+* email
+* salary
+* job_title
+* department_name
+
+Answer:- 
+
+SELECT
+e.employee_id,e.email,e.salary,j.job_title,department_name
+from employee e LEFT join job j on e.job_id = j.job_id 
+LEFT JOIN department d on e.department_id = d.department_id;
+
+
+Problem 9 : The following query is given:
+
+SELECT
+  t1.employee_id,
+  t1.email,
+  t1.salary,
+  t2.job_title,
+  t3.department_name
+FROM
+  employee AS t1
+LEFT JOIN job AS t2 ON t1.job_id = t2.job_id
+LEFT JOIN department AS t3 ON t1.department_id = t3.department_id;
+
+Modify the above query. Group the data at the department_name level and calculate the number of employees for each department. Assign the alias number_of_employees to the result. Sort the output table by decreasing number_of_employees.
+The output table should contain two columns:
+* department_name
+* number_of_employees
+
+Answer:- SELECT
+ t3.department_name,
+ count(t1.employee_id) number_of_employee
+FROM
+  employee AS t1
+LEFT JOIN department AS t3 ON t1.department_id = t3.department_id
+group by t3.department_name order by number_of_employee desc;
+
+
+Problem 10 : The following query is given:
+
+SELECT
+  t1.employee_id,
+  t1.email,
+  t1.salary,
+  t2.job_title,
+  t3.department_name
+FROM
+  employee AS t1
+LEFT JOIN job AS t2 ON t1.job_id = t2.job_id
+LEFT JOIN department AS t3 ON t1.department_id = t3.department_id;
+
+Modify the above query. Group the data on the job_title level and calculate the number of employees for each position. Assign the alias number_of_employees to the result. Also, find the average salary for the position and assign the alias avg_salary. Sort the result by descending avg_salary.
+The output table should contain three columns:
+* job_title
+* number_of_employees
+* avg_salary
+
+Answer:- SELECT
+  t2.job_title,
+  count(t1.employee_id) number_of_employees,
+  Avg(t1.salary) avg_salary
+FROM
+  employee AS t1
+LEFT JOIN job AS t2 ON t1.job_id = t2.job_id
+LEFT JOIN department AS t3 ON t1.department_id = t3.department_id
+group by t2.job_title ORDER by avg_salary DESC;
+
+
+
+Problem 11 : Create a LEFT JOIN of tables:
+* location
+* country
+using the country_id column. Display all columns in the output table.
+
+Answer:- select * from location LEFT JOIN country on location.country_id = country.country_id;
+
+
+Problem 12 : Create a LEFT JOIN of tables:
+* location
+* country
+using the country_id column.
+In the output table, display the following columns:
+* location_id
+* street_address
+* city
+* country_name
+Sort the output table in ascending order by country_name.
+
+Answer:- select l.location_id,l.street_address,l.city,c.country_name from location l LEFT JOIN country c on l.country_id = c.country_id;
+
+
+
+INNER JOIN:---
+-------------------------------------
+
+Problem 1 : Create an INNER JOIN of tables:
+* product
+* category
+Use the category_id column to join the tables. Notice that the category_id 
+column in the product table contains NULL values.
+Display all columns in the output table.
+
+Answer:- select * from product p INNER Join category c on p.category_id = c.category_id;
+
+Problem 2 :
+Create an INNER JOIN of tables:
+* product
+* category
+Use the category_id column to join the tables.
+Display the following columns in the output table:
+* product_id
+* product_name
+* list_price
+* category_name
+
+Answer:- select p.product_id,p.product_name,p.list_price,c.category_name from product p INNER Join category c on p.category_id = c.category_id;
+
+
+Problem 3 :
+The following query is given:
+
+SELECT
+  t1.product_id,
+  t1.product_name,
+  t1.list_price,
+  t2.category_name
+FROM
+  product AS t1
+INNER JOIN category AS t2 ON t1.category_id = t2.category_id;
+
+Modify the given query to group the data on the category_name level. Calculate the number of products for each category and assign an alias number_of_products.
+The output table should contain two columns:
+category_name
+number_of_products
+Sort output table in descending order by number_of_products.
+
+Answer:- 
+
+SELECT
+  t2.category_name,
+  count(t1.product_id) as number_of_products 
+FROM
+  product AS t1
+INNER JOIN category AS t2 ON t1.category_id = t2.category_id
+group by t2.category_name
+order by number_of_products desc;

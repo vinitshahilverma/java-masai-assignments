@@ -1,0 +1,128 @@
+Ques 1: What is serialization? When we use it try to explain it with any real use case. 
+
+Answer:-  Serialization is the conversion of a state of an object into a byte stream for 
+          transferring it over a network or saving it into the database. 
+          
+          Use-cases: 
+          Gaming: in gaming, we can save the progress by saving the current state 
+          of the gameplay to the database and when we need we can simply retrieve the data from 
+          the database, and the same state of the game will be restored and we can resume from 
+          the same state.
+          
+Ques 2: Can you serialize an object of subclass if the superclass does not implement serializable ?
+
+Answer:-  Yes we can serialize any class which implements the serializable ( and its subclasses 
+          even if the sub-class does not mention Serializable in the class declaration) even If 
+          the superclass is not implementing the serializable provided it must provide the no-args 
+          constructor as JVM won’t be able to execute the parameterized constructor as the child 
+          class which is serialized will have a super keyword to execute the parent class no-args 
+          constructor while deserializing the child class.
+          
+Ques 3: Can you prevent serializing a subclass object when the supertype is serializable?
+
+Answer: Yes we can prevent the child class from serializing by providing two specific methods 
+        which throws the NotSerializableException?
+        
+        class A implements Serializable{ } class B extends A{ 
+ 
+       public void writeObject(ObjectOutputStream oos) throws NotSerializableException{   
+       throw new NotSerializableException();  
+       }   
+       
+        public void readObject(ObjectInputStream ois) throws NotSerializableException{   
+        throw new NotSerializableException();  
+        } 
+ 
+     }
+        
+ 
+Ques 4: What is the use of transient keyword in Java explain with a use-case ?
+
+Answer:-  transient keyword 
+          
+          1.applicable for variables 
+          2.it is used when we don’t that variable to be serialized 
+          3.example: password, confidential info, cvv etc.
+          
+          class A implements Serializable{ 
+ 
+             String username;  
+             String transient password;//won't be serialized  ......// 
+             }
+          
+Ques 5: Why serialVersionUID is important in class definitions. When it becomes important to 
+        define objects. What is JVM behavior in case you do not define serialVersionUID for your object?  
+        
+Answer:- If try to Serialize a object than a unique serialVersionUID is generated, It may user defined
+         or JVM created. And when will deSerialize the object firstly it matches the  serialVersionUID
+         if it matches than it will deSerialize else gives classNotFound exception.
+         
+ Ques 6: Can we write try block without a catch and finally?
+ Answer: Yes we can write try block without catch and finally from java 7 onwards but with only 
+         try-with-resources block.
+         
+         public static void main(String[] args) throws SomeSeriousProblemOccuredException { 
+ 
+              try (Scanner sc = new Scanner(System.in)) { 
+ 
+               System.out.println("Enter a number");    
+               int next = sc.nextInt(); 
+ 
+               if (next > 10)     
+               throw new SomeSeriousProblemOccuredException("Number should be less than 10"); 
+ 
+             } 
+ 
+            System.out.println("end of main");  
+            }
+            
+Ques 7: Can we write try with finally block but not catch block 
+Answer:-  Yes we can write the try with finally as well
+
+          public static void main(String[] args) {      
+          
+              try {   
+               //some code     
+ 
+              }finally {    
+              //some code  
+               } 
+ 
+              System.out.println("end of main"); 
+              
+               }
+               
+Ques 8: How to create user-defined unchecked exceptions in java 
+Answer: To declare the user-defined unchecked exceptions then user-defined class should extend 
+         to either the RuntimeException class or the sub-class of the RuntimeException class.
+         
+        class SomeException extends RuntimeException{ 
+        } class SomeException extends ArithematicException{ 
+        } class SomeException extends InputMismatchException{ 
+        }
+        
+Ques 9: What happens when method returns something from the try block, will finally be executed 
+        in that case? 
+
+Answer: finally will be executed even if the method returns some value from the try block itself,
+        as the the JVM will first execute the finally block and then comes back to return statement of try block.
+        
+        public static int method() {      
+           
+           try {    
+           //some code         
+           return 1;//return statement   
+           }finally {   
+            //some code    
+            System.out.println("Inside the finally block"); //always runs before return statement  
+             }  
+           }
+        
+Ques 10: Name some important Checked Exceptions you have used in your implementations       
+          
+Answer: CheckedExceptions: 
+        ClassNotFoundException 
+        IOException 
+        FileNotFoundException
+         
+        

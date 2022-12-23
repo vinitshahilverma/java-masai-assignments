@@ -1,0 +1,33 @@
+3. Write some important features of Spring Boot.
+
+Answer:- 1) We can make both simple and web based application using springboot.
+         2) Spring boot focuses n convention over configuration.
+         3) Spring boot supports auto configuration
+         4) It provides a tomcat server for development so we not need to install any other server.
+         
+
+         
+4. Try to compare Spring vs Spring-Web vs SpringBoot?
+
+Answer:- Spring:- 
+
+        Spring frameWork is most popular application development framework .The main feature of 
+        spring framework is dependency injection or inversion of control(IOC).
+        
+        Spring -web or Spring -mvc:-
+
+        Spring mvc is a web mvc framework for building web applications.It contains a lot of 
+        configuration files for various capabilities. It is an HTTP web application development 
+        framework.
+        
+        Spring Boot:- 
+        Spring boot makes it easy to quickly bootstrap and start developing a spring based application
+        It reduces a lot of boilerplate code.
+        
+        
+        
+5. How to run spring boot application on customized port number (other than default 8080)?
+
+Answer:- To change the port we can write in the application.properties 
+         
+         server.port = 8888 //it can be any port number that you want to keep.
