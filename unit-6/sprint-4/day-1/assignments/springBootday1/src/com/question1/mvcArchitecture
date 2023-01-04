@@ -1,0 +1,25 @@
+Q1/- Explain the Java-based Spring MVC architecture.
+
+Answer:- In the webServer their is a web container software is there .
+         When ever client will give the request.Intially one servlet is their.
+         Request is trapped by the servlet implemented class.
+         
+         Servlet capture the user input than it validate the input.
+         
+         After that to process the data it will take the help of service layer class.
+         it process the data and try to communicate with data access layer class.
+         
+         DAL class basically communicate with database.
+         
+         After performing the task database give the data to the data access layer and DAL give 
+         the data to the  service layer and service give the data  to the Servlet layer.
+         
+         Instead of generating the data directly servlet will keep it to the repository and forward the 
+         control to the JSP.
+         
+         And JSP will give response to the client.
+         
+         JSP is taking care of View.
+         Servlet is working as the Controller.
+         Model is Java Bean class+ Service Layer + Data Access Layer.
+         

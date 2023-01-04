@@ -1,0 +1,12 @@
+Q1/- What are the limitations of EntityManager methods to perform CRUD operations with
+     DB?
+     
+Answer:- Limitations of EntityManager:-
+
+         1. Bulk updating and deleting of data is not possible,
+         
+         2. To access Entity object we can not specify some extra condition.
+         
+         3.Retrieving Entity object based on only ID field(Primary Key) i.e @ID annotation.
+         
+         4. Multiple Entity object retrieval is not possible (multiple record).

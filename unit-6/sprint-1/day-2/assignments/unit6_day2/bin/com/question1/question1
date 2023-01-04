@@ -1,0 +1,19 @@
+Q1.:-  Explain Layered Architecture in Business application?
+
+Answer:- In Business Application Layered Architecture is divided into 3 layers:-
+
+         1) Presentation Layer:- It is a set of java classes, Which are responsible for generating 
+            user input screen and response page(output screen) is known as presentation Layer.
+            This Layer provides the interaction with the end user.
+            
+         2)Business Logic Layer/Service Layer:-
+           Implementation of business rule of a business organization is known as business Logic.
+           It is a collection of java classes whose methods have business logic to process the 
+           data according to the business rules.
+           
+           
+         3)Data Access Layer:- A set of java classes whose methods are exclusively meant for performing
+            CRUD operation with the Data Base server using JDBC and DAO pattern is known as Data 
+            Access Layer.
+             
+h

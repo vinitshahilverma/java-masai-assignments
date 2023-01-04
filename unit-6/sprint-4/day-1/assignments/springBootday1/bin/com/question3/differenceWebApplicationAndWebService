@@ -1,0 +1,10 @@
+Q3/- What is the difference between WebApplication and Web-services?
+
+Answer:- WebApplication generates the view page where as Wev-service generates the 
+         raw data.
+         
+         View page cannot be reused but raw data can be used inside any other webApplication or any 
+         other type of application developed in any technology.
+         
+         WebApplication generates a html response while webServices can generate dynamic result
+         as raw data(json,xml,text);

@@ -1,0 +1,20 @@
+Q:- Explain difference between JPA and Hibernate?
+
+Answer:- 
+
+        JPA:- JPA is a open specification given by oracle to develop the ORM based software.
+              
+              JPA provides a standard API which is suitable for any kind of ORM software.
+              
+              JPA belongs to Java.persistence package.
+              
+        Hibernate:-
+        
+                It is most common used JPA implementation.
+                
+                It is ORM based FrameWork.
+                
+                It comes in the org.hibernate package.
+              
+              
+              

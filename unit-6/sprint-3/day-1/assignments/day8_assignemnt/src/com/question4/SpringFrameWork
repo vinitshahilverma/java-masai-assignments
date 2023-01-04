@@ -1,0 +1,12 @@
+Q4/- Write Short notes on how the Spring framework evolves.
+
+Answer:-  Spring frame allows to write the business logic in a POJO classes, and 
+          Spring Container provides the middle ware services to our main business 
+          class with less process overhead.
+          
+          so our business logic related classes need not implement or extends any other 
+          classes or interfaces or override any unnecessary methods.  no need to install 
+          ApplicationServer software.
+          
+          unlike EJB container, Spring container is a lightweight container, can be activated 
+          in any type of Java application (need not install ApplicationServer software).

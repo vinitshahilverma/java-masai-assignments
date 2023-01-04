@@ -1,0 +1,20 @@
+Qno:-1 What are the advantages of using Hibernate over JDBC?
+
+Answer:- 
+        1. Hibernate provides implicit connection pooling.
+        
+        2. Exception handling is optional because it throws unchecked exception.
+        
+        3. It provides fine SQL statements internally which enhance the performance.
+        
+        4. Hibernte provide the facility to not to use boiler plate code for CRUD operations
+           which saves a lot of time.
+           
+        5.It persist or save java object directly to the DataBase.
+        
+        6.It is a light weight software. To implement hibernate we need not to install the software.
+        
+        7. It supports the POJO model.
+        
+        8.It maintains a single local copy which enhance the performance. 
+        

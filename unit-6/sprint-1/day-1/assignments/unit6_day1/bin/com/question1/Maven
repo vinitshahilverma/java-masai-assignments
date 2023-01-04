@@ -1,0 +1,28 @@
+Q1. When should one use Maven?
+
+Answer:- Developers have multiple responsibilities like :- 
+
+       1)write some source code(bunch of classes, inteface...).
+       2)Add some external  jarfiles to the classpath (dependencies of our application)
+         in JDBC dao project, driver jar file is the dependency of our project.
+       3)Compile the code.
+       4)Prepare some test cases. (Unit test, Junit, Mockito, Sonar ).
+       5)Add Junit/mockito related jar files inside the classpath.
+       6)compile  and run the test cases.
+       7)arrange our code in a standard folder structure
+
+         Java based Webapplication:
+          ----------------------------------
+
+         *.java
+         *.class
+         *.jar
+        *.html
+
+       8.Do the packaging : build the jar, war file. 
+       9.deploy this jar file/ war file to the server.
+       
+       If developer do any of the mistake than they needs to repeat the process again and again.
+       So,Maven is a tool that can now be used for building and managing any Java-based project. 
+       It makes the day-to-day work of Java developers easier and generally help with the 
+       comprehension of any Java-based project.

@@ -1,0 +1,16 @@
+Q2/- How many scopes are there for a Spring Bean, which is the default scope for a Spring
+     Bean? Explain with an example.
+     
+     
+Answer:- There are 4 scope for a bean:-
+         
+         1.Singleton scope.
+         2.Prototype scope.
+         3. request scope
+         4. session scope
+         
+         Singleton is the default scope for a Spring Bean.
+         
+         Example:- A obj1 = ctx.getBean("a1",A.class);
+                   A obj2 = ctx.getBean("a1",A.class);
+                   System.out.println(obj1 == obj2); //true

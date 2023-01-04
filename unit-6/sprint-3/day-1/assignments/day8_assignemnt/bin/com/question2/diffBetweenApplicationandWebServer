@@ -1,0 +1,13 @@
+Q2/- What is the difference between an Application Server and a Web server?
+
+Answer:- 1) Java based webserver is the small part/ subset of the ApplicationServer.
+
+         2) Application server contains both EJB container and ServletContainer software where 
+            as webserver software contains only ServletContainer software, it does not contains 
+            EJB-container.
+            
+         3) Application software can be communicated with any kind of protocol example:- http,
+            smtp, ftp , etc. whereas Web Server can be communicated only using Http protocol.
+            
+         4) Application software is a heavy weight server where as Web Server is a lightweight 
+            server. 

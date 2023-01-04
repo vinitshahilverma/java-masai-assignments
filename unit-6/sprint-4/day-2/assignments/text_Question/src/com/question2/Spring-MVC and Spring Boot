@@ -1,0 +1,30 @@
+Q2/- Explain the difference between Spring-MVC and Spring Boot.
+
+Answer:- Spring Boot:-
+         
+         It is a spring platform that mainly focus on conversation over configuration.
+         
+         It is not a framework or a software, It is just a spring application development 
+         platform which provides RAD(rapid Application development) feature to the Spring frame work.
+         
+         Spring boot support auto-Configuration
+         
+         It provides integrated tomcat server, so we can develop web-application/web services without
+         installing webServer.
+         
+         With the help of Spring boot, we can develop webApplication/ webServices without installing 
+         webServer.
+         
+         It provides integrated tomcat server, as well as it configure DispatcherServlet internally.
+         
+         Spring-MVC:-
+         
+         It is a spring module to develop java based webApplication/ webServices.
+         
+         it simply the process by providing DispatcherServlet class with predefined flow control.
+         
+         Spring MVC specifies each dependency separately.
+       
+         Ready to use feature are provided by it for building web applications
+         
+         In the Spring MVC, a deployment descriptor is required.

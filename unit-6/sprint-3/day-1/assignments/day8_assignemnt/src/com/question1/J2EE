@@ -1,0 +1,24 @@
+Q1/- What is the J2EE, list out some of the Application Server names.
+
+Answer:- J2EE :-  Java Enterprise Edition. It is an open specification and the implementation 
+                  of this specification is "Application Server" Software.
+                  
+                  
+         Some of the Application server software are:-
+         
+         1) Web server : by IBM.
+         
+         2) Weblogic server : by Oracle.
+         
+         3) Glassfish server : by Oracle.
+         
+         4) JBOSS server/Wildfly server : by RedHat.
+         
+         5) Nginx
+         
+         6) Lighttpd
+         
+         7) Sun java System web server.
+         
+         8) Apache HTTP Server.
+                  

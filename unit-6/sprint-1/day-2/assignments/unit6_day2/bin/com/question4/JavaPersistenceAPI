@@ -1,0 +1,19 @@
+Q4 Explain the properties of JPA(Java Persistence API)?
+
+Answer:- JPA represents a simplification of the persistence programming model.
+         The JPA specification explicitly defines the object-relational mapping,
+         rather than relying on vendor-specific mapping implementations.
+         
+         JPA standardizes the important task of object-relational mapping by using annotations or XML to 
+         map objects into one or more tables of a database.
+         
+         To further simplify the persistence programming model:
+         
+        -The EntityManager API can persist, update, retrieve, or remove objects from a database.
+        
+        -The EntityManager API and object-relational mapping metadata handle most of the database 
+          operations without requiring you to write JDBC or SQL code to maintain persistence.
+          
+        -JPA provides a query language, extending the independent EJB querying language (also known as JPQL),
+         that you can use to retrieve objects without writing SQL queries specific to the database that you 
+         are working with.

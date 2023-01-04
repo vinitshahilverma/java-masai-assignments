@@ -1,0 +1,21 @@
+Q7. What are the rules for a table to be in 1NF, 2NF, and 3NF?
+
+Answer:- Rules for 1NF:-
+
+         1)Table should not contains any multiValue attributes(comma/space Separated values).
+         2)Each cell should contains only atomic value.
+         3)A table should not have the repeating columns.
+         
+         
+         Rules for 2NF:-
+         
+         1)Table must be in the 1NF.
+         2)The table must not contains any partial dependency.
+         3)A table which is having a composite key,i.e a table with a Primary key compound with 
+           two or more Attributes.
+           
+           
+         Rules for 3NF:-
+         
+         1) It should be in 2NF.
+         3) There should not be any Transitional Dependency.

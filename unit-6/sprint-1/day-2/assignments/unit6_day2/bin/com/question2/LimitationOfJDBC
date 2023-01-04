@@ -1,0 +1,22 @@
+Qn2:-Limitation of JDBC based persistence logic over JPA?
+
+Answer:- 
+         1.JDBC can't store the java objects into the table directly,because SQL queries does not 
+           allows the java objects as input, here we need to convert object data into the simple
+           (atomic)value to store them in a DB.
+           
+         2.JDBC code is the Data Base dependent code because it uses Data Base software dependent 
+           queries. So our JDBC based persistence logic is not 100% portable across various DataBase
+           Software.
+           
+           
+        3.JDBC code having boiler plate code problem (writing the same code except SQL queries in 
+          multiple classes of our application again and again).
+          
+        4.JDBC code throws lots of checked exceptions, programmer need to handle them.
+        
+        5.After the select operation, we get the ResultSet object.this RS object we can not transfer 
+          from one layer to another layer and to get the data from the ResultSet we need to know the 
+          structure of the ResultSet.
+          
+        6.There is no any caching and transaction management support is available in JDBC.

@@ -1,0 +1,18 @@
+Q1/- What is a Servlet ? What is the role of the DispatcherServlet in the Spring boot rest 
+     application.
+     
+Answer:- Servlet is a class in the SpringBoot which capture the user input and Validate it,
+         Also Instead of generating data directly to the user it keeps data to the repository 
+         and forward the control to the JSP.
+         
+         Spring frameWork provides Spring-web-mvc module to simplify the manual mvc application 
+         development.In which, Spring mvc module provides a predefined Servlet class with 
+         predefined flow control logic,i.e, DispatcherServlet class.
+         
+         DispatcherServlet simplify the process of developing java based webApplication/webService
+         with predefined flow control.It 
+         
+         
+          
+          
+          

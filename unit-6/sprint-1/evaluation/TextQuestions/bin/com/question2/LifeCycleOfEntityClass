@@ -1,0 +1,37 @@
+Q.Explain the Life-cycle of Entity class with example?
+
+Answer:- Life-cycle of Entity has 3 state.
+
+
+        1.NewState/transient state:-
+        
+               If we create a persistence class than this class is not attached with the
+               EntityManager object, then this state is called newState/transient state.
+               
+               Example:- Account account = new Account(100,verma@gamil.com,dugda,1000);
+               
+         
+        2.Persistence state:-
+               If a persistence class object or Entity object is attached with the 
+               EntityManager object, then this state is called persistence state.
+        
+               Example:-  em.persist(account);
+               
+        3.Detached state:-
+        
+                 If will call clear() or close() method on the EntityMangaer Object then 
+                 all the associated object gets detached.
+                 Due to application of this the Entity object will not remains in-sync with 
+                 the table.
+                 
+                 Example:-
+                 
+                         em.clear()// Detached state and not in-sync.
+                         
+                          em.getTransaction().begin();
+		  
+		                  em.persist(account);// In-sync
+		  
+		                  em.getTransaction().commit();
+                 
+        

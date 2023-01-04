@@ -1,0 +1,26 @@
+Q4/- Explain about the various HTTP request methods and some of the commonly used
+     HTTP response status codes.
+     
+Answer:- Http request:-
+         -----------------
+         
+         We can make http request by following:-
+         
+         By typing in the URL.
+         By clicking on the hyperlink.
+         By submitting any form
+         etc.
+         
+         http status code:
+        -----------------------
+        
+        by default these status code will be set by the server, or as a developer we can 
+        also set our desired status code.   
+        
+        100 -- 199  : information 
+        200 -- 299 : success or OK    
+        300--399 : redirection
+        400 -499 : incomplete resource / bad request
+        500-599 : server-error
+         
+        these status code will be used by the client to know the status of their request.

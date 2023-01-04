@@ -1,0 +1,22 @@
+Q2/- What are the Spring Stereotype annotations, and what are the main uses of these
+     annotations.
+     
+Answer:- What are the Spring Stereotype annotations, and what are the main uses of these
+annotations.
+
+it is special type of annotation in which we annotate the classes based on their role in the application
+
+                            @component
+    --------------------------------------------------------------
+    |                           |                               |
+@Service                    @controller                 @repository
+
+
+@service: - classes handling business logic
+
+@controller: classes handling the presentation logic and the flow of application
+
+@retpository:- classes that handles the data access logic with the database.
+
+
+@component:- these are the classes that are handling mix two or more type of application logic and thus this annotation is reffered for these classes.

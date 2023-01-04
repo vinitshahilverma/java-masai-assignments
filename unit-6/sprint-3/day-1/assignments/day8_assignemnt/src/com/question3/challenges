@@ -1,0 +1,19 @@
+Q3/- What are the challenges of developing an Enterprise application?
+
+Answer:- An Enterprise application is by default a distributed application, because
+         Enterprise application is divided into seprate modules, and each module can be a 
+         independent application, here each module will collaborate with each other and 
+         provide services as whole.
+         
+         1. Data security:- The data exchange should be encrypted and decripted, authentication and 
+                            authorization is also required.
+       
+         2.Client can access the application in a platform and language independent form.
+           i.e, by making our presentation logic web-enabled. so client can access our application
+           through the web-browser.
+           
+        3.Presentation could be in GUI : that can be accesed by the browser (webapplication)
+                                         they are not reusable.
+                                         
+        4.Presentation could be in the form raw data (JSON or xml format)  (webservices)
+          they are the reusable.

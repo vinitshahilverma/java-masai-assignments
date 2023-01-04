@@ -1,0 +1,17 @@
+Q2. Explain the core concepts of Maven.
+
+Answer:- Core concepts of Maven are:-
+
+        1) Maven reads the pom.xml file.
+        2) Downloads dependencies into local repository.
+        3) Execute life cycles,build phases and goals.
+        4  Execute pulgins.
+        
+        Maven's primary goal is to allow a developer to comprehend the complete state of a
+        development effort in the shortest period of time.In order to attain this goal, Maven deals
+        with several areas of concern.
+        
+        1) Making the build process easy.
+        2) Providing a uniform build system.
+        3) Providing quality project information.
+        4) Encouraging better development practices.

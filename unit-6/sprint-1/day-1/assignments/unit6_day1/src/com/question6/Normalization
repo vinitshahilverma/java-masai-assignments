@@ -1,0 +1,42 @@
+Q7. Explain what a Primary key, Candidate Key, Prime Attributes,
+    and Non-prime Attributes is.
+    
+Answer:- 
+       Example : -student(roll, name marks, address, dob, email);
+       
+       So all possible super key can be:-
+       
+       1.roll    
+       2.roll name  
+       3.roll name address
+       4. name email
+       5.email     
+       6.name address
+       7.address email
+       8. dob email
+       9.name dob
+       
+       Candidate key :- 
+                It is the minimal set of super key.
+                It should not have a subset as another super key.
+                
+                Example from above:-
+                
+                1)roll
+                2)email
+                3)dob email
+                4)name dob
+                
+        Primary key:-
+                 From the candidate key DataBase Administrator will choose a primary key, It is 
+                 generally minimum number if attribute declared as Primary key.
+                 Some time we can make other than minimum value attribute also as a Primary key
+                 (composite key).
+                 
+       Prime Attribute:- Those Attribute which are part of candidate key is known as Prime Attribute.
+       
+       Non-Prime Attribute:- Those Attribute which are not the part of candidate key is known as 
+                             Non-Prime Attribute. 
+                 
+       
+       

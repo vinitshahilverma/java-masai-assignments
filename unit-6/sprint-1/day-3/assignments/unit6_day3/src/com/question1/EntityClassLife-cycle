@@ -1,0 +1,26 @@
+Q1/- Explain the Entity class life-cycle.
+
+Answer:- An Entity class has the 3 life-cycle state:-
+
+        1. New state/transient state:-
+            If we create a object of persistence class and this class is not attached with the 
+            EntityMangaer object then this stage is known as new State/ transient state.
+            
+            Example:- Student s = new Student(10,"Shahil",800);
+            
+        2. Persistence State:- 
+            If a persistence class object or Entity object is associated with 
+            Entity object, then this object will be in persistence state.
+           
+           Example:-when we call a persist(-) method by supplying Student entity object then at time 
+                    student object will be in persistence state.
+                    
+                    or 
+                    
+                    When we call find() method and this method returns the Student Object,then that
+                    object will also be in persistence state.
+                    
+         3.Detached State:- 
+               When we call close() or clear() method on the EntityMangaer Object then 
+               all the associated entity object will be in detached state.
+               In this state the Entity object will not be in-sync with the table.

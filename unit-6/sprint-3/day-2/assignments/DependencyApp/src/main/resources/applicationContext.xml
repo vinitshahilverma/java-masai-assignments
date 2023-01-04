@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+ <bean id="s1" class="com.useCase.Student">
+         
+         <constructor-arg name="roll" value="101"/>
+         <constructor-arg name="name" value="shahil"/>
+         <constructor-arg name="marks" value="800"/>
+ 
+ </bean>
+ 
+ <bean id = "s2" class ="com.useCase.Student">
+            
+            <constructor-arg name="roll" value="102"/>
+            <constructor-arg name="name" value="Verma"/>
+            <constructor-arg name="marks" value="900"/>
+ </bean>
+ 
+  <bean id = "s3" class ="com.useCase.Student">
+            
+            <constructor-arg name="roll" value="103"/>
+            <constructor-arg name="name" value="Vinit"/>
+            <constructor-arg name="marks" value="950"/>
+ </bean>
+ 
+  <bean id="clg" class="com.useCase.Collage">
+  
+           <property name="collage_name" value="NIT"/>
+           <property name="collage_address" value="Raipur"/>
+           <property name="students">
+           
+            <list>
+                <ref bean="s1"/>
+                  <ref bean="s2"/>
+                   <ref bean="s3"/>
+            </list>
+           
+           </property>
+  </bean>
+
+</beans>

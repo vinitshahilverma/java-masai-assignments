@@ -1,0 +1,25 @@
+Q5. Why to use ORM and What are the benefits of ORM?
+
+Answer:-
+       1.It can persist/store java object to the DB directly.
+
+       2.it supports POJO and POJI model
+
+       3.It is a lightweight s/w because to execute the ORM based application we need not install 
+         any kind of servers.
+
+       4.ORM persistence logic is DB independent. it is portable across multiple DB software.
+       (because here we deal with object, not with the SQL queries)
+ 
+       5.Prevent the developers from boiler plate code coding to perform CRUD operations.
+
+       6.It generates fine tuned SQL statements internally that improves the performance.
+
+       7.It provides caching mechanism (maintaining one local copy to enhance the performance)
+
+       8.It provides implicit connection pooling.
+
+       9.Exception handling is optional because it throws unchecked exceptions.
+
+       10.It has a special Query language called JPQL (JPA query language ) that totally depends upon the '
+       objects.  
