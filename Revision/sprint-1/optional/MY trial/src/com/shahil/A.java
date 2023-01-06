@@ -10,28 +10,13 @@ import java.io.ObjectOutputStream;
 
 public class A {
 	
-  public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+  public static void main(String[] args) {
 	  
-          ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("abc.txt"));
+         B b = new C();
           
-          B b = new C();
-          
-          oos.writeObject(b);
-          
-          oos.flush();
-          
-          oos.close();
-          
-          System.out.println("Done");
-          
-          
-          ObjectInputStream ooi = new ObjectInputStream(new FileInputStream("abc.txt"));
-          
-          B c = (B) ooi.readObject();
-          
-          System.out.println(c.x);
-          
-          
+         b.funB();
+         b.funC();
+             
   }
 
 }

@@ -1,10 +1,14 @@
 package com.shahil;
 
-import java.io.Serializable;
 
-public interface B extends Serializable{
+
+public abstract class B {
 	
-	public int x=5;
+	public abstract void funB();
 	
-	public void funB();
+	public void funC() {
+		System.out.println("In funC");
+	}
+	
+	
 }

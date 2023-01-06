@@ -1,12 +1,7 @@
 package com.shahil;
 
-public class C implements B{
+public interface C{
 
-	@Override
-	public void funB() {
-		
-		System.out.println("Inside funB");
-		
-	}
+	
 
 }
